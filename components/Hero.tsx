@@ -15,7 +15,7 @@ export default function Hero({ dict }: { dict: any }) {
             rgba(8,18,40,0.88) 60%,
             rgba(5,10,20,0.96) 100%
           ),
-          url('/images/hero-bg.jpg')
+          url('/images/hero-bg.png')
         `,
       }}
     >

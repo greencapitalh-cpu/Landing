@@ -1,3 +1,4 @@
+import { getDictionary } from "@/lib/dictionaries";
 import Hero from "@/components/Hero";
 import Applications from "@/components/Applications";
 import HowItWorks from "@/components/HowItWorks";

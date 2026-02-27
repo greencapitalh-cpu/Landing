@@ -4,10 +4,18 @@ import { motion } from "framer-motion";
 
 export default function Hero({ dict }: { dict: any }) {
   return (
-    <section className="min-h-screen flex items-center justify-center px-8 pt-32">
-      <div className="max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
+    <section
+      className="min-h-screen flex items-center justify-center px-8 pt-32 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(11,18,32,0.88), rgba(11,18,32,0.88)), url('/images/hero-bg.jpg')",
+      }}
+    >
+      <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
+        
+        {/* TEXT BLOCK */}
         <div>
-          <h1 className="text-4xl lg:text-6xl font-semibold leading-tight">
+          <h1 className="text-4xl lg:text-6xl font-semibold leading-tight text-white">
             {dict.hero.title}
             <br />
             <span className="text-blue-400">
@@ -15,31 +23,35 @@ export default function Hero({ dict }: { dict: any }) {
             </span>
           </h1>
 
-          <p className="mt-6 text-gray-300 text-lg">
+          <p className="mt-6 text-gray-300 text-lg max-w-xl">
             {dict.hero.description}
           </p>
 
-          <div className="mt-8 flex gap-4">
-            <button className="bg-blue-500 px-6 py-3 rounded-lg">
+          <div className="mt-10 flex gap-5">
+            <button className="bg-blue-600 hover:bg-blue-700 transition px-7 py-3 rounded-lg font-medium shadow-lg shadow-blue-600/20">
               {dict.hero.primary}
             </button>
 
-            <button className="border border-gray-500 px-6 py-3 rounded-lg">
+            <button className="border border-gray-500 hover:border-gray-300 hover:text-white transition px-7 py-3 rounded-lg font-medium text-gray-300">
               {dict.hero.secondary}
             </button>
           </div>
         </div>
 
+        {/* VISUAL PANEL */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
           className="hidden lg:block"
         >
-          <div className="bg-gradient-to-br from-blue-500/20 to-transparent p-16 rounded-3xl">
-            <div className="w-full h-64 bg-blue-400/10 rounded-xl"></div>
+          <div className="bg-white/5 backdrop-blur-md p-16 rounded-3xl border border-white/10 shadow-2xl">
+            <div className="w-full h-72 bg-white/10 rounded-xl flex items-center justify-center text-white/30 text-sm tracking-wide">
+              Blockchain Infrastructure
+            </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   );

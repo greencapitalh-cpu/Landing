@@ -5,7 +5,7 @@ import { locales } from "@/lib/locales";
 
 export default function Navbar({ locale }: { locale: string }) {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-transparent backdrop-blur-sm px-8 py-6 flex justify-between items-center">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-sm px-8 py-6 flex justify-between items-center">
       <Link href={`/${locale}`} className="text-xl font-semibold">
         udochain
       </Link>

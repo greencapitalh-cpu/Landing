@@ -21,7 +21,7 @@ export const en = {
       {
         title: "Digital Certifications",
         description:
-          "Verifiable registration of documents, processes and formal validations.",
+          "Verifiable registration of documents and formal validations.",
         image: "/images/cert.jpg",
         bullets: [
           "Technical certifications",
@@ -29,43 +29,6 @@ export const en = {
           "Institutional validation",
         ],
       },
-
-      {
-        title: "International Law",
-        description:
-          "Infrastructure for cross-border validation and independent auditing.",
-        image: "/images/law.jpg",
-        bullets: [
-          "Digital evidence",
-          "Auditable contracts",
-          "Jurisdictional verification",
-        ],
-      },
-
-      {
-        title: "Asset Tokenization",
-        description:
-          "Structured digital representation of real-world assets with verifiable integrity.",
-        image: "/images/token.jpg",
-        bullets: [
-          "Financial assets",
-          "Investment projects",
-          "Productive assets",
-        ],
-      },
-
-      {
-        title: "Real Estate Fractionation",
-        description:
-          "Transparent registration of participations in real estate developments.",
-        image: "/images/realestate.jpg",
-        bullets: [
-          "Real estate projects",
-          "Fractional ownership",
-          "Transparent participation records",
-        ],
-      },
-
       {
         title: "Industrial Traceability",
         description:
@@ -77,37 +40,6 @@ export const en = {
           "System integration",
         ],
       },
-
-      {
-        title: "Logistics & Export Tracking",
-        description:
-          "Verifiable event registration across international logistics chains.",
-        image: "/images/logistics.jpg",
-        bullets: [
-          "Shipment tracking",
-          "Document validation",
-          "International traceability",
-        ],
-      },
     ],
-  },
-
-  security: {
-    title: "Security & Architecture",
-    description:
-      "Infrastructure designed for high-demand institutional environments.",
-    points: [
-      "Decentralized registration",
-      "Cryptographic integrity",
-      "Independent verification",
-      "Enterprise compatibility",
-    ],
-  },
-
-  cta: {
-    title: "Implement Verifiable Infrastructure",
-    subtitle:
-      "Integrate blockchain-based certification into your real-world operations.",
-    button: "Request a Demonstration",
   },
 };

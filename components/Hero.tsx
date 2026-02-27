@@ -6,18 +6,23 @@ export default function Hero({ dict }: { dict: any }) {
 
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
+
+        {/* Imagen más desplazada a la derecha */}
         <img
           src="/images/hero-bg.png"
           alt="Blockchain Infrastructure"
-          className="w-full h-full object-cover object-right"
+          className="w-full h-full object-cover object-[75%_center]"
         />
 
-        {/* Left dark fade (clean and professional) */}
-        <div className="absolute inset-0 bg-gradient-to-r 
-          from-[#061226] 
-          via-[#071a36]/80 
-          to-transparent">
+        {/* 40-45% oscuro sólido + transición profesional */}
+        <div className="absolute inset-0">
+          {/* Bloque oscuro sólido */}
+          <div className="absolute left-0 top-0 h-full w-[45%] bg-[#020817]" />
+
+          {/* Transición suave hacia luces */}
+          <div className="absolute left-[45%] top-0 h-full w-[25%] bg-gradient-to-r from-[#061A35] to-transparent" />
         </div>
+
       </div>
 
       {/* CONTENT */}
@@ -61,6 +66,7 @@ export default function Hero({ dict }: { dict: any }) {
             </a>
 
           </div>
+
         </div>
       </div>
 

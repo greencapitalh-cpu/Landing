@@ -2,7 +2,7 @@
 
 export default function Hero({ dict }: { dict: any }) {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#010814] flex items-center">
+    <section className="relative min-h-screen w-full overflow-hidden bg-[#020B1A] flex items-center">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 flex items-center justify-end">
@@ -12,11 +12,11 @@ export default function Hero({ dict }: { dict: any }) {
           className="h-full w-auto object-contain"
         />
 
-        {/* Oscurecimiento profesional del lado izquierdo */}
-        <div className="absolute inset-0 bg-gradient-to-r 
-          from-[#010814] 
-          via-[#020B1F]/90 
-          via-[#03132A]/70 
+        {/* Oscurecimiento profesional sin afectar la imagen */}
+        <div className="absolute inset-0 bg-gradient-to-r
+          from-[#020B1A] 
+          via-[#020B1A]/95
+          via-[#03142B]/80
           to-transparent">
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 export default function Hero({ dict }: { dict: any }) {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#061226]">
 
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
@@ -12,17 +12,18 @@ export default function Hero({ dict }: { dict: any }) {
           className="w-full h-full object-cover object-center"
         />
 
-        {/* Fade suave profesional solo para asegurar contraste */}
-        <div className="absolute inset-0 bg-gradient-to-r 
-          from-[#061226]/90 
-          via-[#061226]/60 
-          to-transparent">
-        </div>
+        {/* Gradient para contraste elegante */}
+        <div
+          className="absolute inset-0 bg-gradient-to-r 
+          from-[#061226]/95 
+          via-[#061226]/70 
+          to-transparent"
+        />
       </div>
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
-        <div className="max-w-2xl pt-24 pb-24">
+        <div className="max-w-2xl pt-28 pb-28">
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] text-white tracking-tight">
             {dict.hero.title}
@@ -36,13 +37,14 @@ export default function Hero({ dict }: { dict: any }) {
             {dict.hero.description}
           </p>
 
-          <div className="mt-12 flex gap-6">
+          <div className="mt-12 flex flex-col sm:flex-row gap-6">
 
             <a
               href="https://app.udochain.com"
-              className="bg-blue-600 hover:bg-blue-700 
+              className="inline-flex items-center justify-center
+              bg-blue-600 hover:bg-blue-700 
               transition-all duration-300 
-              px-7 py-3.5 rounded-lg 
+              px-8 py-4 rounded-lg 
               text-white font-medium 
               shadow-xl shadow-blue-500/40"
             >
@@ -51,9 +53,10 @@ export default function Hero({ dict }: { dict: any }) {
 
             <a
               href="https://verify.udochain.com"
-              className="border border-white/30 
+              className="inline-flex items-center justify-center
+              border border-white/30 
               hover:border-white 
-              px-7 py-3.5 rounded-lg 
+              px-8 py-4 rounded-lg 
               text-gray-200 hover:text-white 
               transition-all duration-300"
             >

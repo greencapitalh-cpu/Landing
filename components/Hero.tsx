@@ -1,10 +1,11 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 export default function Hero({ dict }: { dict: any }) {
   return (
     <section className="min-h-screen flex items-center justify-center px-8 pt-32">
       <div className="max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
-        
         <div>
           <h1 className="text-4xl lg:text-6xl font-semibold leading-tight">
             {dict.hero.title}
@@ -39,7 +40,6 @@ export default function Hero({ dict }: { dict: any }) {
             <div className="w-full h-64 bg-blue-400/10 rounded-xl"></div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

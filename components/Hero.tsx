@@ -26,13 +26,22 @@ export default function Hero({ dict }: { dict: any }) {
             {dict.hero.description}
           </p>
 
-          <div className="mt-10">
+          <div className="mt-10 flex gap-6">
+            
             <a
               href="https://app.udochain.com"
               className="inline-block bg-blue-600 hover:bg-blue-700 transition px-8 py-4 rounded-lg font-medium text-lg shadow-lg shadow-blue-600/20"
             >
-              {dict.hero.primary}
+              Create Account
             </a>
+
+            <a
+              href="https://verify.udochain.com"
+              className="inline-block border border-gray-500 hover:border-gray-300 hover:text-white transition px-8 py-4 rounded-lg font-medium text-lg text-gray-300"
+            >
+              Verify Evidence
+            </a>
+
           </div>
         </div>
 

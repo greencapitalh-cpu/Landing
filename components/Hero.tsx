@@ -2,7 +2,7 @@
 
 export default function Hero({ dict }: { dict: any }) {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#061226] flex items-center">
+    <section className="relative min-h-screen w-full overflow-hidden bg-[#020B1A] flex items-center">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 flex items-center justify-end">

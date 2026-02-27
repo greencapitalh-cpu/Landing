@@ -17,10 +17,7 @@ export default function LocaleLayout({
   const { locale } = params;
 
   return (
-    <html
-      lang={locale}
-      dir={locale === "ar" ? "rtl" : "ltr"}
-    >
+    <html lang={locale}>
       <body className="bg-[#0B1220] text-white">
         <Navbar locale={locale} />
         {children}

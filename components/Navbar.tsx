@@ -15,7 +15,6 @@ export default function Navbar({ locale }: { locale: string }) {
         udochain
       </Link>
 
-      {/* Right side */}
       <div className="flex items-center gap-8">
         
         {/* Language Switch */}
@@ -35,13 +34,21 @@ export default function Navbar({ locale }: { locale: string }) {
           ))}
         </div>
 
-        {/* Login Button */}
-        <Link
-          href="https://app.udocain.com" 
+        {/* Verify Evidence */}
+        <a
+          href="https://verify.udochain.com"
+          className="text-sm text-gray-300 hover:text-white transition"
+        >
+          Verify Evidence
+        </a>
+
+        {/* Create Account */}
+        <a
+          href="https://app.udochain.com"
           className="bg-blue-600 hover:bg-blue-700 transition px-5 py-2 rounded-lg text-sm font-medium shadow-lg shadow-blue-600/20"
         >
-          Access Platform
-        </Link>
+          Create Account
+        </a>
 
       </div>
     </nav>

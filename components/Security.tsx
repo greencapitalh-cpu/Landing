@@ -4,29 +4,31 @@ export default function Security() {
   return (
     <section className="relative w-full py-32 bg-[#020B1A] overflow-hidden">
 
-      {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      {/* BACKGROUND IMAGE LAYER */}
+      <div className="absolute inset-0 pointer-events-none">
 
         <img
           src="/images/security-bg.png"
           alt="Blockchain Security Shield"
-          className="w-full h-full object-cover opacity-70"
+          className="w-full h-full object-cover opacity-60"
         />
 
-        {/* Fade lateral para integrar con fondo */}
-        <div className="absolute inset-0 bg-gradient-to-r 
-          from-[#020B1A] 
-          via-[#020B1A]/80 
-          via-[#020B1A]/40 
-          to-[#020B1A]">
-        </div>
+        {/* Horizontal fade */}
+        <div
+          className="absolute inset-0 bg-gradient-to-r
+            from-[#020B1A]
+            via-[#020B1A]/85
+            via-[#020B1A]/50
+            to-[#020B1A]"
+        />
 
-        {/* Fade vertical suave */}
-        <div className="absolute inset-0 bg-gradient-to-b 
-          from-[#020B1A] 
-          via-transparent 
-          to-[#020B1A]">
-        </div>
+        {/* Vertical fade */}
+        <div
+          className="absolute inset-0 bg-gradient-to-b
+            from-[#020B1A]
+            via-transparent
+            to-[#020B1A]"
+        />
 
       </div>
 
@@ -45,7 +47,7 @@ export default function Security() {
         {/* FEATURES GRID */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10">
             <h3 className="text-lg font-medium text-white">
               Immutable Records
             </h3>
@@ -54,7 +56,7 @@ export default function Security() {
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10">
             <h3 className="text-lg font-medium text-white">
               Decentralized Validation
             </h3>
@@ -63,7 +65,7 @@ export default function Security() {
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10">
             <h3 className="text-lg font-medium text-white">
               Advanced Encryption
             </h3>
@@ -72,7 +74,7 @@ export default function Security() {
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10">
             <h3 className="text-lg font-medium text-white">
               Regulatory Ready
             </h3>

@@ -6,11 +6,23 @@ export const en = {
       "Udochain integrates blockchain infrastructure into real-world operations to ensure verifiable integrity and traceability.",
   },
 
+  problemSolution: {
+    problem: {
+      title: "Problem",
+      description:
+        "Challenges in verifying real-world certifications and records lead to inefficiencies, fraud risks, and lack of institutional trust.",
+    },
+    solution: {
+      title: "Solution",
+      description:
+        "Udochain introduces a blockchain-based infrastructure layer that secures records and enables independent verification without centralized control.",
+    },
+  },
+
   applications: {
     title: "Applications in Real Environments",
     subtitle:
       "Infrastructure adaptable to sectors where verifiable trust is critical.",
-
     items: [
       {
         title: "Digital Certifications",

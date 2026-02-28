@@ -10,12 +10,12 @@ export const en = {
     problem: {
       title: "Problem",
       description:
-        "Challenges in verifying real-world certifications and records lead to inefficiencies, fraud risks, and lack of institutional trust.",
+        "Trust in digital records depends on centralized systems that limit transparency and restrict independent verification.",
     },
     solution: {
       title: "Solution",
       description:
-        "Udochain introduces a blockchain-based infrastructure layer that secures records and enables independent verification without centralized control.",
+        "Udochain secures records through cryptographic proof anchored on blockchain, ensuring immutable integrity and reliable verification.",
     },
   },
 

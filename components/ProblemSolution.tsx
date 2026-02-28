@@ -4,23 +4,15 @@ export default function ProblemSolution() {
   return (
     <section className="relative w-full py-28 bg-[#0B1220] overflow-hidden">
 
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* BACKGROUND IMAGE - SIN DISTORSIÓN */}
+      <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+
         <img
-          src="/images/security-bg.png"
-          alt="Blockchain Infrastructure"
-          className="w-full h-full object-cover opacity-45"
+          src="/images/solution.png"
+          alt="Vault Solution Background"
+          className="w-auto h-auto max-w-none object-contain"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r
-          from-[#0B1220]
-          via-[#0B1220]/40
-          to-[#0B1220]" />
-
-        <div className="absolute inset-0 bg-gradient-to-b
-          from-[#0B1220]/70
-          via-transparent
-          to-[#0B1220]/70" />
       </div>
 
       {/* CONTENT */}
@@ -30,10 +22,11 @@ export default function ProblemSolution() {
           {/* PROBLEM */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 rounded-lg border border-blue-500/40 
-                              flex items-center justify-center 
-                              bg-blue-500/10">
-                {/* Shield Icon */}
+              <div
+                className="w-8 h-8 rounded-lg border border-blue-500/40
+                flex items-center justify-center
+                bg-blue-500/10"
+              >
                 <svg
                   className="w-4 h-4 text-blue-400"
                   fill="none"
@@ -61,10 +54,11 @@ export default function ProblemSolution() {
           {/* SOLUTION */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 rounded-lg border border-blue-500/40 
-                              flex items-center justify-center 
-                              bg-blue-500/10">
-                {/* Cube / Blockchain Icon */}
+              <div
+                className="w-8 h-8 rounded-lg border border-blue-500/40
+                flex items-center justify-center
+                bg-blue-500/10"
+              >
                 <svg
                   className="w-4 h-4 text-blue-400"
                   fill="none"
@@ -91,6 +85,7 @@ export default function ProblemSolution() {
 
         </div>
       </div>
+
     </section>
   );
 }

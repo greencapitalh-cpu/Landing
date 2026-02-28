@@ -19,6 +19,39 @@ export const en = {
     },
   },
 
+  howItWorks: {
+    titleLine1: "The Evolution from Centralized Systems",
+    titleLine2: "to",
+    titleHighlight: "Cryptographic Proof",
+
+    left: {
+      title: "TRADITIONAL SYSTEMS",
+      points: [
+        "Centralized databases",
+        "Editable records",
+        "Trust based on authority",
+        "Issuer dependency",
+      ],
+    },
+
+    right: {
+      title: "UDOCHAIN INFRASTRUCTURE",
+      points: [
+        "Unique cryptographic fingerprint",
+        "Immutable blockchain anchoring",
+        "Mathematical verifiable proof",
+        "Independent verification",
+      ],
+    },
+
+    cta: {
+      line1: "Register your evidence",
+      highlight: "FULLY SHIELDED AND PERMANENT",
+      line2: "in seconds",
+      button: "REGISTER EVIDENCE",
+    },
+  },
+
   applications: {
     title: "Applications in Real Environments",
     subtitle:

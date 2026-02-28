@@ -12,11 +12,12 @@ export default function Hero({ dict }: { dict: any }) {
           className="h-full w-auto object-contain"
         />
 
-        {/* Oscurecimiento profesional sin afectar la imagen */}
+        {/* Oscurecimiento más profundo SIN afectar integridad */}
         <div className="absolute inset-0 bg-gradient-to-r
           from-[#020B1A] 
-          via-[#020B1A]/95
-          via-[#03142B]/80
+          via-[#020B1A]/98
+          via-[#020B1A]/90
+          via-[#03142B]/70
           to-transparent">
         </div>
       </div>

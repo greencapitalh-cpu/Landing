@@ -4,18 +4,24 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function MobileApplications({ dict }: { dict: any }) {
-  const apps = dict.applications.items;
+  const apps = dict?.applications?.items || [];
   const [active, setActive] = useState(0);
 
   useEffect(() => {
+    if (!apps.length) return;
+
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % apps.length);
     }, 8000);
+
     return () => clearInterval(interval);
   }, [apps.length]);
 
+  if (!apps.length) return null;
+
   return (
     <div className="relative">
+
       <AnimatePresence mode="wait">
         <motion.div
           key={active}
@@ -40,10 +46,13 @@ export default function MobileApplications({ dict }: { dict: any }) {
               {apps[active].description}
             </p>
 
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-2 text-gray-600">
               {apps[active].bullets.map(
                 (bullet: string, i: number) => (
-                  <li key={i}>• {bullet}</li>
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-blue-600">•</span>
+                    <span>{bullet}</span>
+                  </li>
                 )
               )}
             </ul>
@@ -56,7 +65,7 @@ export default function MobileApplications({ dict }: { dict: any }) {
         {apps.map((_: any, index: number) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full ${
+            className={`w-2 h-2 rounded-full transition-colors duration-300 ${
               active === index
                 ? "bg-blue-600"
                 : "bg-gray-300"
@@ -64,6 +73,7 @@ export default function MobileApplications({ dict }: { dict: any }) {
           />
         ))}
       </div>
+
     </div>
   );
 }

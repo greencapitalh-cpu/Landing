@@ -4,16 +4,23 @@ import { motion } from "framer-motion";
 
 export default function HowItWorks() {
   return (
-    <section className="relative py-32 bg-white text-gray-900">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section className="
+      relative 
+      bg-white 
+      text-gray-900
+      flex items-center
+      lg:h-[80vh]   /* 80% del alto en laptop */
+      py-24 lg:py-0 /* en mobile normal, en laptop sin padding vertical */
+    ">
+      <div className="max-w-6xl mx-auto px-6 text-center w-full">
 
         <h2 className="text-4xl font-semibold tracking-tight">
           How It Works
         </h2>
 
         <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-          A simple infrastructure layer that connects real-world processes
-          with blockchain-based verification.
+          A simple infrastructure layer that connects processes
+          with cryptographic verification.
         </p>
 
         <div className="mt-20 flex flex-col lg:flex-row items-center justify-center gap-16">
@@ -30,7 +37,7 @@ export default function HowItWorks() {
               Issuer
             </div>
             <p className="mt-6 text-gray-600 max-w-xs">
-              A document, certification or asset is registered.
+              A document or asset is registered.
             </p>
           </motion.div>
 
@@ -49,7 +56,7 @@ export default function HowItWorks() {
               Blockchain
             </div>
             <p className="mt-6 text-gray-600 max-w-xs">
-              Cryptographic hash and timestamp are recorded immutably.
+              A unique cryptographic fingerprint is permanently anchored.
             </p>
           </motion.div>
 

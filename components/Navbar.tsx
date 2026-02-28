@@ -30,4 +30,28 @@ export default function Navbar({ locale }: { locale: string }) {
                   : "text-gray-400 hover:text-white"
               }`}
             >
-              {l.to
+              {l.toUpperCase()}
+            </Link>
+          ))}
+        </div>
+
+        {/* VERIFY LINK */}
+        <a
+          href="https://verify.udochain.com"
+          className="text-sm text-gray-300 hover:text-white transition-colors duration-200"
+        >
+          Verify
+        </a>
+
+        {/* CTA */}
+        <a
+          href="https://app.udochain.com"
+          className="bg-blue-600 hover:bg-blue-700 transition-all duration-200 px-5 py-2 rounded-lg text-sm font-medium shadow-lg shadow-blue-600/20"
+        >
+          Create Account
+        </a>
+
+      </div>
+    </nav>
+  );
+}

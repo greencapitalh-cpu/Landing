@@ -10,12 +10,12 @@ export const es = {
     problem: {
       title: "Problema",
       description:
-        "Los desafíos en la verificación de certificaciones y registros del mundo real generan ineficiencias, riesgos de fraude y falta de confianza institucional.",
+        "La confianza en los registros digitales depende de sistemas centralizados que limitan la transparencia y dificultan la verificación independiente.",
     },
     solution: {
       title: "Solución",
       description:
-        "Udochain introduce una capa de infraestructura basada en blockchain que asegura los registros y permite la verificación independiente sin control centralizado.",
+        "Udochain asegura los registros mediante prueba criptográfica en blockchain, garantizando integridad inmutable y verificación confiable.",
     },
   },
 

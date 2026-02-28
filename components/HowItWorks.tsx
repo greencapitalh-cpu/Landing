@@ -1,85 +1,82 @@
 "use client";
 
-import { motion } from "framer-motion";
-
-export default function HowItWorks() {
+export default function HowItWorks({ dict }: { dict: any }) {
   return (
-    <section className="
-      relative 
-      bg-white 
-      text-gray-900
-      flex items-center
-      lg:h-[80vh]   /* 80% del alto en laptop */
-      py-24 lg:py-0 /* en mobile normal, en laptop sin padding vertical */
-    ">
-      <div className="max-w-6xl mx-auto px-6 text-center w-full">
+    <section className="relative bg-white text-gray-900 lg:h-[80vh] flex items-center overflow-hidden">
 
-        <h2 className="text-4xl font-semibold tracking-tight">
-          How It Works
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
+        <img
+          src="/images/comparación.png"
+          alt="Comparison Background"
+          className="w-full object-contain"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full text-center">
+
+        {/* TITLE */}
+        <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
+          {dict.howItWorks.titleLine1}
+          <br />
+          {dict.howItWorks.titleLine2}{" "}
+          <span className="text-blue-600">
+            {dict.howItWorks.titleHighlight}
+          </span>
         </h2>
 
-        <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-          A simple infrastructure layer that connects processes
-          with cryptographic verification.
-        </p>
+        {/* COMPARISON */}
+        <div className="mt-16 grid grid-cols-2 gap-12 items-start">
 
-        <div className="mt-20 flex flex-col lg:flex-row items-center justify-center gap-16">
+          {/* LEFT */}
+          <div className="text-left space-y-6">
+            <h3 className="text-lg font-semibold tracking-wide text-gray-600">
+              {dict.howItWorks.left.title}
+            </h3>
 
-          {/* STEP 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center text-center"
-          >
-            <div className="w-24 h-24 rounded-2xl border border-gray-200 flex items-center justify-center text-sm text-gray-500">
-              Issuer
-            </div>
-            <p className="mt-6 text-gray-600 max-w-xs">
-              A document or asset is registered.
-            </p>
-          </motion.div>
+            <ul className="space-y-4 text-lg text-gray-700">
+              {dict.howItWorks.left.points.map((point: string, i: number) => (
+                <li key={i}>• {point}</li>
+              ))}
+            </ul>
+          </div>
 
-          {/* CONNECTOR */}
-          <div className="hidden lg:block w-24 h-px bg-gray-200" />
+          {/* RIGHT */}
+          <div className="text-left space-y-6">
+            <h3 className="text-lg font-semibold tracking-wide text-blue-700">
+              {dict.howItWorks.right.title}
+            </h3>
 
-          {/* STEP 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center text-center"
-          >
-            <div className="w-24 h-24 rounded-2xl border border-gray-200 flex items-center justify-center text-sm text-gray-500">
-              Blockchain
-            </div>
-            <p className="mt-6 text-gray-600 max-w-xs">
-              A unique cryptographic fingerprint is permanently anchored.
-            </p>
-          </motion.div>
-
-          {/* CONNECTOR */}
-          <div className="hidden lg:block w-24 h-px bg-gray-200" />
-
-          {/* STEP 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center text-center"
-          >
-            <div className="w-24 h-24 rounded-2xl border border-gray-200 flex items-center justify-center text-sm text-gray-500">
-              Verification
-            </div>
-            <p className="mt-6 text-gray-600 max-w-xs">
-              Anyone can independently verify authenticity.
-            </p>
-          </motion.div>
+            <ul className="space-y-4 text-lg text-gray-800">
+              {dict.howItWorks.right.points.map((point: string, i: number) => (
+                <li key={i}>• {point}</li>
+              ))}
+            </ul>
+          </div>
 
         </div>
+
+        {/* CTA */}
+        <div className="mt-20">
+          <p className="text-xl text-gray-700">
+            {dict.howItWorks.cta.line1}
+          </p>
+
+          <p className="text-3xl lg:text-4xl font-semibold mt-2">
+            <span className="text-blue-700">
+              {dict.howItWorks.cta.highlight}
+            </span>
+          </p>
+
+          <p className="text-xl text-gray-600 mt-2">
+            {dict.howItWorks.cta.line2}
+          </p>
+
+          <button className="mt-8 bg-blue-600 hover:bg-blue-700 transition-all duration-300 px-10 py-4 rounded-full text-white text-lg font-medium shadow-xl shadow-blue-600/30">
+            {dict.howItWorks.cta.button}
+          </button>
+        </div>
+
       </div>
     </section>
   );

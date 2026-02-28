@@ -2,7 +2,7 @@
 
 export default function ProblemSolution() {
   return (
-    <section className="relative w-full py-32 bg-[#0B1220] overflow-hidden">
+    <section className="relative w-full min-h-[50vh] bg-[#0B1220] overflow-hidden flex items-center">
 
       {/* IMAGEN SIN TOCAR */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -14,12 +14,12 @@ export default function ProblemSolution() {
       </div>
 
       {/* CONTENIDO */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl space-y-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
+        <div className="max-w-2xl space-y-14">
 
           {/* PROBLEM */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-8 rounded-lg border border-blue-500/40 flex items-center justify-center bg-blue-500/10">
                 <svg
                   className="w-4 h-4 text-blue-400"
@@ -40,14 +40,12 @@ export default function ProblemSolution() {
             <p className="text-gray-300 text-lg leading-relaxed">
               Challenges in verifying real-world certifications and records
               lead to inefficiencies, fraud risks, and lack of institutional trust.
-              Centralized systems allow modification of records and create
-              structural vulnerabilities.
             </p>
           </div>
 
           {/* SOLUTION */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-8 rounded-lg border border-blue-500/40 flex items-center justify-center bg-blue-500/10">
                 <svg
                   className="w-4 h-4 text-blue-400"
@@ -67,9 +65,7 @@ export default function ProblemSolution() {
 
             <p className="text-gray-300 text-lg leading-relaxed">
               Udochain introduces a blockchain-based infrastructure layer
-              that cryptographically secures records, ensures immutable
-              timestamps, and enables independent verification without
-              centralized control.
+              that secures records and enables independent verification.
             </p>
           </div>
 

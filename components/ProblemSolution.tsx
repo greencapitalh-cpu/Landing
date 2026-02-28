@@ -2,10 +2,10 @@
 
 export default function ProblemSolution() {
   return (
-    <section className="relative w-full min-h-[50vh] bg-[#0B1220] overflow-hidden flex items-center">
+    <section className="relative w-full h-[40vh] bg-[#0B1220] overflow-hidden">
 
       {/* IMAGEN SIN TOCAR */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+      <div className="absolute right-0 bottom-0 pointer-events-none">
         <img
           src="/images/solution.png"
           alt="Vault Solution"
@@ -14,8 +14,9 @@ export default function ProblemSolution() {
       </div>
 
       {/* CONTENIDO */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <div className="max-w-2xl space-y-14">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col justify-center">
+
+        <div className="max-w-2xl space-y-10">
 
           {/* PROBLEM */}
           <div>

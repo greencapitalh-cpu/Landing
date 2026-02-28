@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function HowItWorks() {
   return (
-    <section className="py-32 bg-white text-gray-900">
+    <section className="relative py-32 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         <h2 className="text-4xl font-semibold tracking-tight">
@@ -18,12 +18,13 @@ export default function HowItWorks() {
 
         <div className="mt-20 flex flex-col lg:flex-row items-center justify-center gap-16">
 
+          {/* STEP 1 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center text-center"
           >
             <div className="w-24 h-24 rounded-2xl border border-gray-200 flex items-center justify-center text-sm text-gray-500">
               Issuer
@@ -33,14 +34,16 @@ export default function HowItWorks() {
             </p>
           </motion.div>
 
-          <div className="hidden lg:block w-24 h-px bg-gray-200"></div>
+          {/* CONNECTOR */}
+          <div className="hidden lg:block w-24 h-px bg-gray-200" />
 
+          {/* STEP 2 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center text-center"
           >
             <div className="w-24 h-24 rounded-2xl border border-gray-200 flex items-center justify-center text-sm text-gray-500">
               Blockchain
@@ -50,14 +53,16 @@ export default function HowItWorks() {
             </p>
           </motion.div>
 
-          <div className="hidden lg:block w-24 h-px bg-gray-200"></div>
+          {/* CONNECTOR */}
+          <div className="hidden lg:block w-24 h-px bg-gray-200" />
 
+          {/* STEP 3 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center text-center"
           >
             <div className="w-24 h-24 rounded-2xl border border-gray-200 flex items-center justify-center text-sm text-gray-500">
               Verification

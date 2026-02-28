@@ -2,7 +2,7 @@
 
 export default function Hero({ dict }: { dict: any }) {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#020B1A] flex items-center">
+    <section className="relative hidden lg:flex min-h-screen w-full overflow-hidden bg-[#020B1A] items-center">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 flex items-center justify-end">
@@ -12,21 +12,21 @@ export default function Hero({ dict }: { dict: any }) {
           className="h-full w-auto object-contain"
         />
 
-        {/* Oscurecimiento más profundo SIN afectar integridad */}
+        {/* Oscurecimiento limpio sin romper imagen */}
         <div className="absolute inset-0 bg-gradient-to-r
-          from-[#020B1A] 
-          via-[#020B1A]/98
-          via-[#020B1A]/90
-          via-[#03142B]/70
+          from-[#020B1A]
+          via-[#020B1A]/97
+          via-[#020B1A]/85
+          via-[#03142B]/60
           to-transparent">
         </div>
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
         <div className="max-w-2xl">
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] text-white tracking-tight">
+          <h1 className="text-6xl font-semibold leading-[1.05] text-white tracking-tight">
             {dict.hero.title}
             <br />
             <span className="text-blue-400">
@@ -34,11 +34,11 @@ export default function Hero({ dict }: { dict: any }) {
             </span>
           </h1>
 
-          <p className="mt-8 text-gray-300 text-lg lg:text-xl leading-relaxed">
+          <p className="mt-8 text-gray-300 text-lg leading-relaxed">
             {dict.hero.description}
           </p>
 
-          <div className="mt-12 flex flex-col sm:flex-row gap-6">
+          <div className="mt-12 flex gap-6">
 
             <a
               href="https://app.udochain.com"

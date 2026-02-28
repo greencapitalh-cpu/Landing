@@ -19,6 +19,39 @@ export const es = {
     },
   },
 
+  howItWorks: {
+    titleLine1: "La Evolución del Sistema Centralizado",
+    titleLine2: "a la",
+    titleHighlight: "Prueba Criptográfica",
+
+    left: {
+      title: "SISTEMAS TRADICIONALES",
+      points: [
+        "Bases de datos centralizadas",
+        "Registros editables",
+        "Confianza por autoridad",
+        "Dependencia del emisor",
+      ],
+    },
+
+    right: {
+      title: "INFRAESTRUCTURA UDOCHAIN",
+      points: [
+        "Huella criptográfica única",
+        "Anclaje inmutable en blockchain",
+        "Prueba matemática verificable",
+        "Verificación independiente",
+      ],
+    },
+
+    cta: {
+      line1: "Registra tu evidencia",
+      highlight: "TOTALMENTE BLINDADA E IMBORRABLE",
+      line2: "en cuestión de segundos",
+      button: "REGISTRAR EVIDENCIA",
+    },
+  },
+
   applications: {
     title: "Aplicaciones en Entornos Reales",
     subtitle:

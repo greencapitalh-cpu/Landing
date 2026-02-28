@@ -2,9 +2,9 @@
 
 export default function ProblemSolution() {
   return (
-    <section className="relative w-full h-[40vh] bg-[#0B1220] overflow-hidden">
+    <section className="relative w-full h-[50vh] bg-[#0B1220] overflow-hidden">
 
-      {/* IMAGEN SIN TOCAR */}
+      {/* IMAGEN INTACTA */}
       <div className="absolute right-0 bottom-0 pointer-events-none">
         <img
           src="/images/solution.png"
@@ -15,8 +15,7 @@ export default function ProblemSolution() {
 
       {/* CONTENIDO */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col justify-center">
-
-        <div className="max-w-2xl space-y-10">
+        <div className="max-w-2xl space-y-12">
 
           {/* PROBLEM */}
           <div>

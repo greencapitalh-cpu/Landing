@@ -2,7 +2,7 @@
 
 export default function HowItWorks({ dict }: { dict: any }) {
   return (
-    <section className="relative bg-white text-gray-900 lg:h-[80vh] flex items-center">
+    <section className="relative bg-white text-gray-900 min-h-[80vh] flex items-center py-24">
 
       {/* CONTENIDO */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full text-center">
@@ -27,7 +27,7 @@ export default function HowItWorks({ dict }: { dict: any }) {
         </div>
 
         {/* COMPARISON */}
-        <div className="mt-16 grid grid-cols-2 gap-16 max-w-5xl mx-auto text-left">
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-5xl mx-auto text-left">
 
           {/* LEFT */}
           <div className="space-y-6">

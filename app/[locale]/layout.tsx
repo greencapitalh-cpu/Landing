@@ -17,7 +17,8 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className="bg-[#0B1220] text-white">
+      <head />
+      <body className="bg-[#0B1220] text-white antialiased">
         <Navbar locale={locale} />
         {children}
       </body>

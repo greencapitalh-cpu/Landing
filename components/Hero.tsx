@@ -75,23 +75,28 @@ export default function Hero({ content, locale }: { content: any; locale: string
       {/* ================= MOBILE ================= */}
 <section className="block lg:hidden w-full bg-white">
 
-  {/* IMAGEN ARRIBA */}
-  <div className="w-full h-[50vh] bg-white">
+  {/* IMAGEN */}
+  <div className="relative w-full h-[50vh]">
+
     <img
       src={bgImage}
       alt="UDoChain"
-      className="w-full h-full object-cover object-[78%_center]"
+      className="w-full h-full object-cover object-[65%_center]"
     />
+
+    {/* TITULO SOBRE IMAGEN */}
+    <div className="absolute bottom-4 left-0 w-full px-6 text-center">
+      <h1 className="text-[30px] font-bold text-black leading-tight">
+        Bienvenido a UDoChain
+      </h1>
+    </div>
+
   </div>
 
-  {/* TEXTO */}
-  <div className="px-6 pt-6 pb-8 text-center bg-white">
+  {/* TEXTO DEBAJO */}
+  <div className="px-6 pt-4 pb-8 text-center bg-white">
 
-    <h1 className="text-[32px] font-bold text-black leading-tight">
-      {content.title}
-    </h1>
-
-    <p className="text-gray-600 text-[15px] mt-4 leading-relaxed">
+    <p className="text-gray-600 text-[15px] leading-relaxed">
       {content.description}
     </p>
 

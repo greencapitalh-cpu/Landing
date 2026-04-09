@@ -2,47 +2,38 @@
 
 export default function Hero({ content, locale }: { content: any; locale: string }) {
 
-  const heroImage = `/images/bg-${locale}.png`;
-  const fallbackImage = `/images/bg-en.png`;
+  const bgImage = `/images/bg-${locale}.png`;
 
   return (
-    <section className="min-h-screen w-full flex items-center pt-20">
+    <section
+      className="min-h-screen w-full flex items-center justify-center relative"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
 
-      <div className="max-w-7xl mx-auto w-full px-6">
+      {/* OVERLAY SUAVE PARA LEGIBILIDAD */}
+      <div className="absolute inset-0 bg-white/70 lg:bg-white/0" />
+
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6">
 
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 items-center">
 
-          {/* TEXT (TOP MOBILE / LEFT DESKTOP) */}
-          <div className="order-1 text-center lg:text-left">
+          {/* TEXT */}
+          <div className="text-center lg:text-right">
 
             <h1 className="text-4xl lg:text-6xl font-semibold text-black leading-tight">
               {content.title}
             </h1>
 
-          </div>
-
-          {/* IMAGE */}
-          <div className="order-2 flex justify-center">
-
-            <img
-              src={heroImage}
-              alt="Hero"
-              className="w-full max-w-md lg:max-w-full object-contain"
-              onError={(e) => {
-                e.currentTarget.src = fallbackImage;
-              }}
-            />
-
-          </div>
-
-          {/* DESCRIPTION + BUTTONS */}
-          <div className="order-3 lg:col-span-2 text-center lg:text-left max-w-2xl">
-
-            <p className="text-gray-600 text-lg mt-2">
+            <p className="text-gray-700 text-lg mt-4">
               {content.description}
             </p>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            {/* BUTTONS */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-end">
 
               <a
                 href="https://app.udochain.com/login"

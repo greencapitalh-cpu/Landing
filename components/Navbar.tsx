@@ -1,3 +1,4 @@
+/*
 "use client";
 
 import { useState } from "react";
@@ -12,7 +13,7 @@ export default function Navbar({ locale }: { locale: string }) {
 
       <div className="relative">
 
-        {/* ACTIVE LANGUAGE */}
+        {/* ACTIVE LANGUAGE /}
         <button
           onClick={() => setOpen(!open)}
           className="text-sm font-medium text-gray-800"
@@ -20,7 +21,7 @@ export default function Navbar({ locale }: { locale: string }) {
           {locale.toUpperCase()}
         </button>
 
-        {/* DROPDOWN */}
+        {/* DROPDOWN /}
         {open && (
           <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-300 rounded-xl shadow-xl overflow-hidden">
 
@@ -46,4 +47,10 @@ export default function Navbar({ locale }: { locale: string }) {
 
     </nav>
   );
+}
+*/
+
+
+export default function Navbar() {
+  return null;
 }

@@ -1,131 +1,71 @@
-/*
 "use client";
 
-export default function Hero({ dict }: { dict: any }) {
+export default function Hero({ dict, locale }: { dict: any; locale: string }) {
+
+  const heroImage = `/images/bg-${locale}.png`;
+  const fallbackImage = `/images/bg-en.png`;
+
   return (
-    <section className="relative hidden lg:flex min-h-screen w-full overflow-hidden bg-[#020B1A] items-center">
+    <section className="min-h-screen w-full flex items-center pt-20">
 
-      {/* BACKGROUND /}
-      <div className="absolute inset-0 flex items-center justify-end">
+      <div className="max-w-7xl mx-auto w-full px-6">
 
-        {/* Imagen preservada sin recorte /}
-        <img
-          src="/images/hero-bg.png"
-          alt="Blockchain Infrastructure"
-          className="h-full w-auto object-contain select-none pointer-events-none"
-        />
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 items-center">
 
-        {/* Oscurecimiento limpio sin romper la imagen /}
-        <div
-          className="absolute inset-0 bg-gradient-to-r
-            from-[#020B1A]
-            via-[#020B1A]/97
-            via-[#020B1A]/85
-            via-[#03142B]/60
-            to-transparent"
-        />
-      </div>
+          {/* TEXT (TOP MOBILE / LEFT DESKTOP) */}
+          <div className="order-1 text-center lg:text-left">
 
-      {/* CONTENT /}
-      <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
-        <div className="max-w-2xl">
+            <h1 className="text-4xl lg:text-6xl font-semibold text-black leading-tight">
+              {dict.hero.title}
+            </h1>
 
-          <h1 className="text-6xl font-semibold leading-[1.05] text-white tracking-tight">
-            {dict.hero.title}
-            <br />
-            <span className="text-blue-400">
-              {dict.hero.subtitle}
-            </span>
-          </h1>
+          </div>
 
-          <p className="mt-8 text-gray-300 text-lg leading-relaxed">
-            {dict.hero.description}
-          </p>
+          {/* IMAGE */}
+          <div className="order-2 flex justify-center">
 
-          <div className="mt-12 flex gap-6">
+            <img
+              src={heroImage}
+              alt="Hero"
+              className="w-full max-w-md lg:max-w-full object-contain"
+              onError={(e) => {
+                e.currentTarget.src = fallbackImage;
+              }}
+            />
 
-            <a
-              href="https://app.udochain.com"
-              className="bg-blue-600 hover:bg-blue-700
-              transition-all duration-300
-              px-8 py-4 rounded-lg
-              text-white font-medium
-              shadow-xl shadow-blue-500/40"
-            >
-              Create Account
-            </a>
+          </div>
 
-            <a
-              href="https://verify.udochain.com"
-              className="border border-white/30
-              hover:border-white
-              px-8 py-4 rounded-lg
-              text-gray-200 hover:text-white
-              transition-all duration-300"
-            >
-              Verify Evidence
-            </a>
+          {/* DESCRIPTION + BUTTONS */}
+          <div className="order-3 lg:col-span-2 text-center lg:text-left max-w-2xl">
+
+            <p className="text-gray-600 text-lg mt-2">
+              {dict.hero.description}
+            </p>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+              <a
+                href="https://app.udochain.com/login"
+                className="px-6 py-3 border border-gray-300 rounded-lg text-gray-800 hover:bg-gray-100 transition"
+              >
+                Login
+              </a>
+
+              <a
+                href="https://app.udochain.com/register"
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              >
+                Register
+              </a>
+
+            </div>
 
           </div>
 
         </div>
-      </div>
-
-    </section>
-  );
-}
-*/
-
-
-
-"use client";
-
-export default function Hero({ dict }: { dict: any }) {
-  return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
-
-      {/* BACKGROUND IMAGE */}
-      <img
-        src="/images/hero-bg.png"
-        alt="UDoChain Background"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-
-      {/* CONTENT */}
-      <div className="relative z-10 text-center px-6 max-w-2xl">
-
-        <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-white">
-          {dict.hero.title}
-          <br />
-          <span className="text-blue-400">
-            {dict.hero.subtitle}
-          </span>
-        </h1>
-
-        <p className="mt-6 text-gray-300 text-base md:text-lg">
-          {dict.hero.description}
-        </p>
-
-        {/* BUTTONS */}
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-
-          <a
-            href="https://app.udochain.com/login"
-            className="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg text-white font-medium"
-          >
-            Login
-          </a>
-
-          <a
-            href="https://app.udochain.com/register"
-            className="border border-white/30 hover:border-white px-6 py-3 rounded-lg text-white transition"
-          >
-            Register
-          </a>
-
-        </div>
 
       </div>
+
     </section>
   );
 }

@@ -87,8 +87,8 @@ export default function Hero({ content, locale }: { content: any; locale: string
     {/* TITULO SOBRE IMAGEN */}
     <div className="absolute bottom-4 left-0 w-full px-6 text-center">
       <h1 className="text-[30px] font-bold text-black leading-tight">
-        Bienvenido a UDoChain
-      </h1>
+  {content.title}
+</h1>
     </div>
 
   </div>

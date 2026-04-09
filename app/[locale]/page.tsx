@@ -1,3 +1,4 @@
+/*
 import { getHeroContent } from "@/lib/heroDictionary";
 import { locales } from "@/lib/locales";
 import Hero from "@/components/Hero";
@@ -19,3 +20,4 @@ export default function Page({
     </main>
   );
 }
+*/

@@ -21,3 +21,14 @@ export default function Page({
   );
 }
 */
+
+import Hero from "@/components/Hero";
+
+export default function Page() {
+  return (
+    <main className="w-full overflow-hidden">
+      <Hero />
+    </main>
+  );
+}
+

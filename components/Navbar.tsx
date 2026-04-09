@@ -22,17 +22,17 @@ export default function Navbar({ locale }: { locale: string }) {
 
         {/* DROPDOWN */}
         {open && (
-          <div className="absolute right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+          <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-300 rounded-xl shadow-xl overflow-hidden">
 
             {locales.map((l) => (
               <Link
                 key={l}
                 href={`/${l}`}
                 onClick={() => setOpen(false)}
-                className={`block px-4 py-2 text-sm text-center ${
+                className={`block px-4 py-3 text-sm text-gray-800 text-center ${
                   l === locale
-                    ? "bg-gray-100 font-medium"
-                    : "hover:bg-gray-50"
+                    ? "bg-gray-200 font-semibold"
+                    : "hover:bg-gray-100"
                 }`}
               >
                 {l.toUpperCase()}

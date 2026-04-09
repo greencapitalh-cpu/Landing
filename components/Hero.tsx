@@ -241,14 +241,14 @@ export default function Hero({ content, locale }: { content: any; locale: string
           <div className="mt-6 flex flex-col gap-4">
 
             <a
-              href="https://app.udochain.com/login"
+              href={`https://app.udochain.com/${locale}/login`}
               className="w-full px-6 py-3 border border-gray-300 rounded-lg text-gray-800 bg-white"
             >
               Login
             </a>
 
             <a
-              href="https://app.udochain.com/register"
+              href={`https://app.udochain.com/${locale}/register`}
               className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg"
             >
               Register
@@ -292,14 +292,14 @@ export default function Hero({ content, locale }: { content: any; locale: string
               <div className="mt-8 flex gap-4">
 
                 <a
-                  href="https://app.udochain.com/login"
+                  href={`https://app.udochain.com/${locale}/login`}
                   className="px-6 py-3 border border-gray-300 rounded-lg text-gray-800 hover:bg-gray-100 transition"
                 >
                   Login
                 </a>
 
                 <a
-                  href="https://app.udochain.com/register"
+                  href={`https://app.udochain.com/${locale}/register`}
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
                 >
                   Register

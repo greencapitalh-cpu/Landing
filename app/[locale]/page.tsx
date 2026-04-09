@@ -1,4 +1,4 @@
-
+/*
 import { getDictionary } from "@/lib/dictionaries";
 import { locales } from "@/lib/locales";
 import Hero from "@/components/Hero";
@@ -25,6 +25,30 @@ export default function Page({
       <HowItWorks dict={dict} />
       <Applications dict={dict} />
       <Security />
+    </main>
+  );
+}
+*/
+
+
+import { getDictionary } from "@/lib/dictionaries";
+import { locales } from "@/lib/locales";
+import Hero from "@/components/Hero";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default function Page({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const dict = getDictionary(params.locale);
+
+  return (
+    <main className="w-full overflow-hidden">
+      <Hero dict={dict} />
     </main>
   );
 }

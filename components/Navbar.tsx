@@ -1,117 +1,49 @@
-/*
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { locales } from "@/lib/locales";
 
 export default function Navbar({ locale }: { locale: string }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-gradient-to-b from-[#0B1220]/95 to-[#0B1220]/70 backdrop-blur-md px-6 lg:px-8 py-4 flex justify-between items-center border-b border-white/5">
+    <nav className="fixed top-0 w-full z-50 flex justify-end px-6 py-4">
 
-      {/* LOGO /}
-      <Link
-        href={`/${locale}`}
-        className="text-lg lg:text-xl font-semibold tracking-tight text-white hover:opacity-90 transition-opacity"
-      >
-        udochain
-      </Link>
+      <div className="relative">
 
-      {/* DESKTOP NAV /}
-      <div className="hidden md:flex items-center gap-8">
-
-        {/* LOCALE SWITCH /}
-        <div className="flex gap-5">
-          {locales.map((l) => (
-            <Link
-              key={l}
-              href={`/${l}`}
-              className={`text-sm transition-colors duration-200 ${
-                l === locale
-                  ? "text-blue-400 font-medium"
-                  : "text-gray-400 hover:text-white"
-              }`}
-            >
-              {l.toUpperCase()}
-            </Link>
-          ))}
-        </div>
-
-        {/* VERIFY LINK /}
-        <a
-          href="https://verify.udochain.com"
-          className="text-sm text-gray-300 hover:text-white transition-colors duration-200"
+        {/* ACTIVE LANGUAGE */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="text-sm font-medium text-gray-800"
         >
-          Verify
-        </a>
+          {locale.toUpperCase()}
+        </button>
 
-        {/* CTA /}
-        <a
-          href="https://app.udochain.com"
-          className="bg-blue-600 hover:bg-blue-700 transition-all duration-200 px-5 py-2 rounded-lg text-sm font-medium shadow-lg shadow-blue-600/20"
-        >
-          Create Account
-        </a>
+        {/* DROPDOWN */}
+        {open && (
+          <div className="absolute right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+
+            {locales.map((l) => (
+              <Link
+                key={l}
+                href={`/${l}`}
+                onClick={() => setOpen(false)}
+                className={`block px-4 py-2 text-sm text-center ${
+                  l === locale
+                    ? "bg-gray-100 font-medium"
+                    : "hover:bg-gray-50"
+                }`}
+              >
+                {l.toUpperCase()}
+              </Link>
+            ))}
+
+          </div>
+        )}
 
       </div>
-    </nav>
-  );
-}
-*/
 
-"use client";
-
-import Link from "next/link";
-import { locales } from "@/lib/locales";
-
-export default function Navbar({ locale }: { locale: string }) {
-  return (
-    <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4">
-
-      {/* LOGO */}
-      <Link
-        href={`/${locale}`}
-        className="text-lg font-semibold text-white"
-      >
-        UDoChain
-      </Link>
-
-      {/* RIGHT SIDE */}
-      <div className="flex items-center gap-6">
-
-        {/* LOCALE SWITCH */}
-        <div className="flex gap-4">
-          {locales.map((l) => (
-            <Link
-              key={l}
-              href={`/${l}`}
-              className={`text-sm ${
-                l === locale
-                  ? "text-blue-400 font-medium"
-                  : "text-gray-300 hover:text-white"
-              }`}
-            >
-              {l.toUpperCase()}
-            </Link>
-          ))}
-        </div>
-
-        {/* LOGIN */}
-        <a
-          href="https://app.udochain.com/login"
-          className="text-sm text-gray-300 hover:text-white transition"
-        >
-          Login
-        </a>
-
-        {/* REGISTER */}
-        <a
-          href="https://app.udochain.com/register"
-          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-sm font-medium transition"
-        >
-          Register
-        </a>
-
-      </div>
     </nav>
   );
 }

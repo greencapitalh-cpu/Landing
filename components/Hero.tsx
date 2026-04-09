@@ -73,49 +73,50 @@ export default function Hero({ content, locale }: { content: any; locale: string
     <>
 
       {/* ================= MOBILE ================= */}
-      <section className="block lg:hidden w-full">
+<section className="block lg:hidden w-full bg-white">
 
-        {/* IMAGEN ARRIBA */}
-        <div className="w-full h-[45vh]">
-          <img
-            src={bgImage}
-            alt="UDoChain"
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
+  {/* IMAGEN ARRIBA */}
+  <div className="w-full h-[50vh] bg-white">
+    <img
+      src={bgImage}
+      alt="UDoChain"
+      className="w-full h-full object-cover object-[78%_center]"
+    />
+  </div>
 
-        {/* TEXTO */}
-        <div className="px-6 py-6 text-center">
+  {/* TEXTO */}
+  <div className="px-6 pt-6 pb-8 text-center bg-white">
 
-          <h1 className="text-4xl font-bold text-black leading-tight">
-            {content.title}
-          </h1>
+    <h1 className="text-[32px] font-bold text-black leading-tight">
+      {content.title}
+    </h1>
 
-          <p className="text-gray-600 text-base mt-5">
-            {content.description}
-          </p>
+    <p className="text-gray-600 text-[15px] mt-4 leading-relaxed">
+      {content.description}
+    </p>
 
-          {/* BOTONES */}
-          <div className="mt-8 flex flex-col gap-4">
+    {/* BOTONES */}
+    <div className="mt-6 flex flex-col gap-4">
 
-            <a
-              href="https://app.udochain.com/login"
-              className="w-full px-6 py-3 border border-gray-300 rounded-lg text-gray-800 hover:bg-gray-100 transition"
-            >
-              Login
-            </a>
+      <a
+        href="https://app.udochain.com/login"
+        className="w-full px-6 py-3 border border-gray-300 rounded-lg text-gray-800 bg-white"
+      >
+        Login
+      </a>
 
-            <a
-              href="https://app.udochain.com/register"
-              className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-            >
-              Register
-            </a>
+      <a
+        href="https://app.udochain.com/register"
+        className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg"
+      >
+        Register
+      </a>
 
-          </div>
+    </div>
 
-        </div>
-      </section>
+  </div>
+
+</section>
 
       {/* ================= DESKTOP ================= */}
       <section

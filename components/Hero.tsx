@@ -1,20 +1,21 @@
+/*
 "use client";
 
 export default function Hero({ dict }: { dict: any }) {
   return (
     <section className="relative hidden lg:flex min-h-screen w-full overflow-hidden bg-[#020B1A] items-center">
 
-      {/* BACKGROUND */}
+      {/* BACKGROUND /}
       <div className="absolute inset-0 flex items-center justify-end">
 
-        {/* Imagen preservada sin recorte */}
+        {/* Imagen preservada sin recorte /}
         <img
           src="/images/hero-bg.png"
           alt="Blockchain Infrastructure"
           className="h-full w-auto object-contain select-none pointer-events-none"
         />
 
-        {/* Oscurecimiento limpio sin romper la imagen */}
+        {/* Oscurecimiento limpio sin romper la imagen /}
         <div
           className="absolute inset-0 bg-gradient-to-r
             from-[#020B1A]
@@ -25,7 +26,7 @@ export default function Hero({ dict }: { dict: any }) {
         />
       </div>
 
-      {/* CONTENT */}
+      {/* CONTENT /}
       <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
         <div className="max-w-2xl">
 
@@ -70,6 +71,61 @@ export default function Hero({ dict }: { dict: any }) {
         </div>
       </div>
 
+    </section>
+  );
+}
+*/
+
+
+
+"use client";
+
+export default function Hero({ dict }: { dict: any }) {
+  return (
+    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
+
+      {/* BACKGROUND IMAGE */}
+      <img
+        src="/images/hero-bg.png"
+        alt="UDoChain Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* CONTENT */}
+      <div className="relative z-10 text-center px-6 max-w-2xl">
+
+        <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-white">
+          {dict.hero.title}
+          <br />
+          <span className="text-blue-400">
+            {dict.hero.subtitle}
+          </span>
+        </h1>
+
+        <p className="mt-6 text-gray-300 text-base md:text-lg">
+          {dict.hero.description}
+        </p>
+
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+
+          <a
+            href="https://app.udochain.com/login"
+            className="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-lg text-white font-medium"
+          >
+            Login
+          </a>
+
+          <a
+            href="https://app.udochain.com/register"
+            className="border border-white/30 hover:border-white px-6 py-3 rounded-lg text-white transition"
+          >
+            Register
+          </a>
+
+        </div>
+
+      </div>
     </section>
   );
 }

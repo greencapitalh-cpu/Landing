@@ -1,6 +1,6 @@
 "use client";
 
-export default function Hero({ dict, locale }: { dict: any; locale: string }) {
+export default function Hero({ content, locale }: { content: any; locale: string }) {
 
   const heroImage = `/images/bg-${locale}.png`;
   const fallbackImage = `/images/bg-en.png`;
@@ -16,7 +16,7 @@ export default function Hero({ dict, locale }: { dict: any; locale: string }) {
           <div className="order-1 text-center lg:text-left">
 
             <h1 className="text-4xl lg:text-6xl font-semibold text-black leading-tight">
-              {dict.hero.title}
+              {content.title}
             </h1>
 
           </div>
@@ -39,7 +39,7 @@ export default function Hero({ dict, locale }: { dict: any; locale: string }) {
           <div className="order-3 lg:col-span-2 text-center lg:text-left max-w-2xl">
 
             <p className="text-gray-600 text-lg mt-2">
-              {dict.hero.description}
+              {content.description}
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

@@ -334,7 +334,7 @@ export default function Hero() {
     <>
 
       {/* ================= MOBILE ================= */}
-      <section className="block lg:hidden w-full bg-white">
+      <section className="block md:hidden w-full bg-white">
 
         {/* IMAGEN */}
         <div className="relative w-full h-[50vh]">
@@ -387,7 +387,7 @@ export default function Hero() {
 
       {/* ================= DESKTOP ================= */}
       <section
-        className="hidden lg:flex min-h-screen w-full items-center relative"
+        className="hidden md:flex min-h-screen w-full items-center relative"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",

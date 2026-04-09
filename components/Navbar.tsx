@@ -1,3 +1,4 @@
+/*
 "use client";
 
 import Link from "next/link";
@@ -7,7 +8,7 @@ export default function Navbar({ locale }: { locale: string }) {
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-b from-[#0B1220]/95 to-[#0B1220]/70 backdrop-blur-md px-6 lg:px-8 py-4 flex justify-between items-center border-b border-white/5">
 
-      {/* LOGO */}
+      {/* LOGO /}
       <Link
         href={`/${locale}`}
         className="text-lg lg:text-xl font-semibold tracking-tight text-white hover:opacity-90 transition-opacity"
@@ -15,10 +16,10 @@ export default function Navbar({ locale }: { locale: string }) {
         udochain
       </Link>
 
-      {/* DESKTOP NAV */}
+      {/* DESKTOP NAV /}
       <div className="hidden md:flex items-center gap-8">
 
-        {/* LOCALE SWITCH */}
+        {/* LOCALE SWITCH /}
         <div className="flex gap-5">
           {locales.map((l) => (
             <Link
@@ -35,7 +36,7 @@ export default function Navbar({ locale }: { locale: string }) {
           ))}
         </div>
 
-        {/* VERIFY LINK */}
+        {/* VERIFY LINK /}
         <a
           href="https://verify.udochain.com"
           className="text-sm text-gray-300 hover:text-white transition-colors duration-200"
@@ -43,12 +44,71 @@ export default function Navbar({ locale }: { locale: string }) {
           Verify
         </a>
 
-        {/* CTA */}
+        {/* CTA /}
         <a
           href="https://app.udochain.com"
           className="bg-blue-600 hover:bg-blue-700 transition-all duration-200 px-5 py-2 rounded-lg text-sm font-medium shadow-lg shadow-blue-600/20"
         >
           Create Account
+        </a>
+
+      </div>
+    </nav>
+  );
+}
+*/
+
+"use client";
+
+import Link from "next/link";
+import { locales } from "@/lib/locales";
+
+export default function Navbar({ locale }: { locale: string }) {
+  return (
+    <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4">
+
+      {/* LOGO */}
+      <Link
+        href={`/${locale}`}
+        className="text-lg font-semibold text-white"
+      >
+        UDoChain
+      </Link>
+
+      {/* RIGHT SIDE */}
+      <div className="flex items-center gap-6">
+
+        {/* LOCALE SWITCH */}
+        <div className="flex gap-4">
+          {locales.map((l) => (
+            <Link
+              key={l}
+              href={`/${l}`}
+              className={`text-sm ${
+                l === locale
+                  ? "text-blue-400 font-medium"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              {l.toUpperCase()}
+            </Link>
+          ))}
+        </div>
+
+        {/* LOGIN */}
+        <a
+          href="https://app.udochain.com/login"
+          className="text-sm text-gray-300 hover:text-white transition"
+        >
+          Login
+        </a>
+
+        {/* REGISTER */}
+        <a
+          href="https://app.udochain.com/register"
+          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white text-sm font-medium transition"
+        >
+          Register
         </a>
 
       </div>

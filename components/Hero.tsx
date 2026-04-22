@@ -445,9 +445,10 @@ export default function Hero() {
       </section>
 
 
-      {/* ================= FOOTER ================= */}
-      <<div className="w-full bg-white border-t border-gray-200 py-6 mt-10">
 
+
+{/* ================= FOOTER ================= */}
+<div className="w-full bg-white border-t border-gray-200 py-6 mt-10">
   <div className="max-w-4xl mx-auto px-6 text-center">
 
     <p className="text-gray-700 text-sm font-medium">
@@ -463,14 +464,9 @@ export default function Hero() {
     </p>
 
   </div>
-
 </div>
 
-      </div>
-
+</>
     
-      
-
-    </>
   );
 }

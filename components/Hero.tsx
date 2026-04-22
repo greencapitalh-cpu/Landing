@@ -446,25 +446,25 @@ export default function Hero() {
 
 
       {/* ================= FOOTER ================= */}
-      <div className="w-full bg-white border-t border-gray-200 py-6">
+      <<div className="w-full bg-white border-t border-gray-200 py-6 mt-10">
 
-        <div className="max-w-7xl mx-auto px-6 text-center">
+  <div className="max-w-4xl mx-auto px-6 text-center">
 
-          <p className="text-gray-800 font-semibold text-sm">
-            UDoChain
-          </p>
+    <p className="text-gray-700 text-sm font-medium">
+      UDoChain
+    </p>
 
-          <p className="text-gray-500 text-sm mt-2 leading-relaxed">
-            30 N Gould St Ste R <br />
-            Sheridan, WY 82801 <br />
-            United States
-          </p>
+    <p className="text-gray-500 text-xs mt-1 leading-relaxed">
+      30 N Gould St Ste R · Sheridan, WY 82801 · United States
+    </p>
 
-          <p className="text-gray-400 text-xs mt-3">
-            © {new Date().getFullYear()} UDoChain. All rights reserved.
-          </p>
+    <p className="text-gray-400 text-[11px] mt-3">
+      © {new Date().getFullYear()} UDoChain
+    </p>
 
-        </div>
+  </div>
+
+</div>
 
       </div>
 

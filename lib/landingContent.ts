@@ -6,6 +6,7 @@ export const supportedLocales: Locale[] = ["en", "es", "pt"];
 export const ui = {
   en: {
     start: "Start with UDoChain",
+    register: "Register with email",
     login: "Login",
     explore: "Explore modules",
     google: "Continue with Google",
@@ -15,6 +16,7 @@ export const ui = {
   },
   es: {
     start: "Empezar con UDoChain",
+    register: "Registrarse con email",
     login: "Ingresar",
     explore: "Ver modulos",
     google: "Continuar con Google",
@@ -24,6 +26,7 @@ export const ui = {
   },
   pt: {
     start: "Comecar com UDoChain",
+    register: "Registrar com email",
     login: "Entrar",
     explore: "Ver modulos",
     google: "Continuar com Google",

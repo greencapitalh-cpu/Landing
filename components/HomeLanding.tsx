@@ -1,5 +1,7 @@
 import { cases, homeContent, modules, normalizeLocale, ui } from "@/lib/landingContent";
 
+const APP_URL = "https://app.udochain.com";
+
 export default function HomeLanding({ locale }: { locale: string }) {
   const lang = normalizeLocale(locale);
   const copy = homeContent[lang];
@@ -19,14 +21,20 @@ export default function HomeLanding({ locale }: { locale: string }) {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#475569]">{copy.description}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href={`/${lang}/validate`}
+              href={`${APP_URL}/register`}
               className="rounded-md bg-[#10a884] px-6 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-[#0d8f72]"
             >
-              {labels.start}
+              {labels.register}
+            </a>
+            <a
+              href={`${APP_URL}/login`}
+              className="rounded-md border border-[#cbd5d1] bg-white px-6 py-3 text-center text-sm font-semibold text-[#0f172a] transition hover:border-[#94a3b8]"
+            >
+              {labels.login}
             </a>
             <a
               href="#modules"
-              className="rounded-md border border-[#cbd5d1] bg-white px-6 py-3 text-center text-sm font-semibold text-[#0f172a] transition hover:border-[#94a3b8]"
+              className="rounded-md border border-transparent px-6 py-3 text-center text-sm font-semibold text-[#17695b] transition hover:bg-white"
             >
               {labels.explore}
             </a>
@@ -96,12 +104,20 @@ export default function HomeLanding({ locale }: { locale: string }) {
             <h2 className="text-4xl font-semibold">{copy.finalTitle}</h2>
             <p className="mt-4 max-w-3xl leading-8 text-slate-300">{copy.finalText}</p>
           </div>
-          <a
-            href={`/${lang}/validate`}
-            className="rounded-md bg-[#10a884] px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#22b999]"
-          >
-            {labels.start}
-          </a>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <a
+              href={`${APP_URL}/register`}
+              className="rounded-md bg-[#10a884] px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#22b999]"
+            >
+              {labels.register}
+            </a>
+            <a
+              href={`${APP_URL}/login`}
+              className="rounded-md border border-white/20 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              {labels.login}
+            </a>
+          </div>
         </div>
       </section>
     </main>

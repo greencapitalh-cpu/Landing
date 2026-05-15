@@ -22,13 +22,9 @@ export default function Page({
 }
 */
 
-import Hero from "@/components/Hero";
+import HomeLanding from "@/components/HomeLanding";
 
-export default function Page() {
-  return (
-    <main className="w-full overflow-hidden">
-      <Hero />
-    </main>
-  );
+export default function Page({ params }: { params: { locale: string } }) {
+  return <HomeLanding locale={params.locale} />;
 }
 

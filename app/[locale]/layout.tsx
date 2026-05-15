@@ -28,7 +28,6 @@ export default function LocaleLayout({
 */
 
 
-import "@/app/globals.css";
 import { locales } from "@/lib/locales";
 import Navbar from "@/components/Navbar";
 
@@ -46,12 +45,9 @@ export default function LocaleLayout({
   const { locale } = params;
 
   return (
-    <html lang={locale}>
-      <head />
-      <body className="bg-[#0B1220] text-white antialiased">
-        <Navbar />
-        {children}
-      </body>
-    </html>
+    <>
+      <Navbar />
+      {children}
+    </>
   );
 }
